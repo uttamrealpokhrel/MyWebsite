@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | Uttam Pokhrel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="about section" href="about.html">
+    <link rel="contact section" href="contact.html">
+    <link rel="follow section" href="follow.html"> 
+    <link rel="register section" href="register.html">
+    <link rel="signin section" href="signin.html">
+    <link rel="signup section" href="signup.html">
+    <link rel="privacy.html" href="privacy.html">
+    <link rel="terms.html" href="terms.html">
+    <style>
+        .signup-container {
+            max-width: 500px;
+            margin: 120px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #764ba2;
+        }
+        
+        .signup-container h1 {
+            color: #764ba2;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1f2937;
+            font-weight: 600;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #764ba2;
+            box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+        }
+        
+        .signup-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #764ba2, #667eea);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .signup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(118, 75, 162, 0.3);
+        }
+        
+        .signup-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #1f2937;
+        }
+        
+        .signup-footer a {
+            color: #764ba2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .signup-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .terms {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header role="banner">
+    <nav role="navigation" aria-label="Main Navigation">
+        <div style="font-size:1.3rem;font-weight:bold;letter-spacing:1px;"><strong>Uttam Pokhrel</strong></div>
+        <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="follow.html">Follow Us</a>
+        </div>
+    </nav>
+</header>
+
+<div class="signup-container">
+    <h1>Sign Up</h1>
+    <form onsubmit="handleSignUp(event)">
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name" required/>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email" required/>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number (Optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Create a strong password" />
+        </div>
+        
+        <div class="form-group">
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" required placeholder="Confirm your password" aria-required="true" />
+        </div>
+        
+        <button type="submit" class="signup-btn">Submit</button>
+    </form>
+    
+    <div class="terms">
+        <p>By signing up, you agree to our Terms and Privacy Policy</p>
+    </div>
+    
+    <div class="signup-footer">
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+</div>
+
+<a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+<footer style="margin-top:60px;">
+    <p>© 2030 Uttam Pokhrel. All rights reserved!</p>
+</footer>
+
+<script>
+    function handleSignUp(event) {
+        event.preventDefault();
+        const fullname = document.getElementById('fullname').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirmpassword = document.getElementById('confirmpassword').value;
+        
+        if (password !== confirmpassword) {
+            alert('Passwords do not match!');
+            return;
+        }
+        
+        if (fullname && email && password) {
+            alert('Account Created Successfully!\n\nWelcome, ' + fullname + '!\nA confirmation email has been sent to ' + email + '\nYou can now sign in to your account.');
+            document.querySelector('form').reset();
+        }
+    }
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In | Uttam Pokhrel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="about section" href="about.html">
+    <link rel="contact section" href="contact.html">
+    <link rel="follow section" href="follow.html"> 
+    <link rel="register section" href="register.html">
+    <link rel="signin section" href="signin.html">
+    <link rel="signup section" href="signup.html">
+    <link rel="privacy.html" href="privacy.html">
+    <link rel="terms.html" href="terms.html">
+    <style>
+        .signin-container {
+            max-width: 450px;
+            margin: 120px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #667eea;
+        }
+        
+        .signin-container h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1f2937;
+            font-weight: 600;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .signin-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .signin-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .signin-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #1f2937;
+        }
+        
+        .signin-footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .signin-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header role="banner">
+    <nav role="navigation" aria-label="Main Navigation">
+        <div style="font-size:1.3rem;font-weight:bold;letter-spacing:1px;"><strong>Uttam Pokhrel</strong></div>
+        <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="follow.html" >Follow Us</a>
+        </div>
+    </nav>
+</header>
+
+<div class="signin-container">
+    <h1>Welcome Back</h1>
+    <form onsubmit="handleSignIn(event)">
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email" />
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password" />
+        </div>
+        
+        <button type="submit" class="signin-btn">Sign In</button>
+    </form>
+    
+    <div class="signin-footer">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <p><a href="#">Forgot Password?</a></p>
+    </div>
+</div>
+
+<a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+<footer style="margin-top:60px;">
+    <p>© 2030 Uttam Pokhrel. All rights reserved!</p>
+</footer>
+
+<script>
+    function handleSignIn(event) {
+        event.preventDefault();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        if (email && password) {
+            alert('Sign In Successful!\n\nWelcome back, ' + email + '!\nYou are now logged in.');
+            document.querySelector('form').reset();
+        }
+    }
+</script>
+<script src="theme.js"></script>
+</body>
+</html>

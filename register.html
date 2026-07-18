@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Uttam Pokhrel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="about section" href="about.html">
+    <link rel="contact section" href="contact.html">
+    <link rel="follow section" href="follow.html"> 
+    <link rel="register section" href="register.html">
+    <link rel="signin section" href="signin.html">
+    <link rel="signup section" href="signup.html">
+    <link rel="privacy.html" href="privacy.html">
+    <link rel="terms.html" href="terms.html">
+    <style>
+        .register-container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .register-container h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Segoe UI', sans-serif;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 8px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .register-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .register-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error-message {
+            display: none;
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid #f5c6cb;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #7f8c8d;
+        }
+
+        .login-link a {
+            color: #667eea;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .login-link a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div style="font-size:1.3rem;font-weight:bold;letter-spacing:1px;"><strong>Uttam Pokhrel</strong></div>
+        <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="follow.html" >Follow Us</a>
+            <a href="register.html" class="register-box">Apply Now</a>
+        </div>
+    </nav>
+</header>
+<div class="register-container">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <h1>REGISTER NOW</h1>
+
+    <div class="success-message" id="successMessage">
+        Registration successful! We'll be in touch soon.
+    </div>
+
+    <div class="error-message" id="errorMessage">
+        Please fill in all fields correctly.
+    </div>
+
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="fullname">Full Name *</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username *</label>
+            <input type="text" id="username" name="username" placeholder="Choose a unique username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" placeholder="At least 8 characters" minlength="8" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmpassword">Confirm Password *</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Re-enter your password" minlength="8" required>
+        </div>
+
+        <div class="form-group">
+            <label for="interests">Interests / Skills</label>
+            <textarea id="interests" name="interests" placeholder="Tell us about your interests (AI, Web Dev, YouTube, etc.)"></textarea>
+        </div>
+
+        <button type="submit" class="register-btn">Create Account</button>
+    </form>
+
+    <div class="login-link">
+        Already have an account? <a href="signin.html">Sign In</a>
+    </div>
+</div>
+<!-- REGISTER NOW -->
+    <section id="register" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding:80px 10%; text-align:center; color:#ffffff;">
+        <h2 style="color:#ffffff; font-size:2.5rem; margin-bottom:20px;">Join Our Team</h2>
+        <p style="font-size:1.1rem; margin-bottom:30px; color:#f3f4f6;">Be part of an amazing learning journey with AI, coding, and tech content creation.</p>
+        <a href="https://forms.gle/f17SiPeSPfDuTWSa8" target="_blank" style="display:inline-block; background:#ffffff; color:#667eea; padding:14px 35px; border-radius:50px; text-decoration:none; font-weight:600; font-size:1.1rem; transition:all 0.3s ease; box-shadow:0 4px 15px rgba(0,0,0,0.15);" onmouseover="this.style.background='#f0f0f0'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.background='#ffffff'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.15)'">Register Now</a>
+    </section>
+     Your data and information is safe and private. We never share or sell your personal information. <search></search>
+<a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+<footer style="margin: top 50px;">
+    <p>© 2029 UTTAM POKHREL. ALL RIGHTS RESERVED!</p>
+</footer>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmpassword').value;
+        const fullname = document.getElementById('fullname').value;
+        const email = document.getElementById('email').value;
+        const username = document.getElementById('username').value;
+
+        const successMsg = document.getElementById('successMessage');
+        const errorMsg = document.getElementById('errorMessage');
+
+        // Reset messages
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+
+        // Validation
+        if (!fullname || !email || !username || !password || !confirmPassword) {
+            errorMsg.textContent = 'Please fill in all required fields.';
+            errorMsg.style.display = 'block';
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            errorMsg.textContent = 'Passwords do not match.';
+            errorMsg.style.display = 'block';
+            return;
+        }
+
+        if (password.length < 8) {
+            errorMsg.textContent = 'Password must be at least 8 characters long.';
+            errorMsg.style.display = 'block';
+            return;
+        }
+
+        // Show success message
+        successMsg.style.display = 'block';
+
+        // Clear form
+        document.getElementById('registrationForm').reset();
+
+        // Optional: Send data to backend
+        const formData = {
+            fullname: fullname,
+            email: email,
+            phone: document.getElementById('phone').value,
+            username: username,
+            interests: document.getElementById('interests').value
+        };
+
+        console.log('Registration data:', formData);
+        
+        // Uncomment to send to backend
+        // fetch('/register', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(formData)
+        // })
+        // .then(response => response.json())
+        // .catch(error => console.error('Error:', error));
+    });
+</script>
+
+<script src="theme.js"></script>
+</body>
+</html>

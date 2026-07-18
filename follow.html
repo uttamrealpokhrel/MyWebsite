@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Follow Us | Uttam Pokhrel</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="about section" href="about.html">
+    <link rel="contact section" href="contact.html">
+    <link rel="follow section" href="follow.html"> 
+    <link rel="register section" href="register.html">
+    <link rel="signin section" href="signin.html">
+    <link rel="signup section" href="signup.html">
+    <link rel="privacy.html" href="privacy.html">
+    <link rel="terms.html" href="terms.html">
+    <style>
+        .follow-container {
+            margin-top: 100px;
+            padding: 60px 10%;
+        }
+        
+        .follow-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .follow-header h1 {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .follow-header p {
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .social-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border-top: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        
+        .social-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .social-icon {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .social-card h3 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        
+        .social-card p {
+            color: #6b7280;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .social-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .youtube-card { border-top-color: #FF0000; }
+        .youtube-card:hover { background: #FFF5F5; }
+        
+        .twitter-card { border-top-color: #1DA1F2; }
+        .twitter-card:hover { background: #F5F8FF; }
+        
+        .instagram-card { border-top-color: #E1306C; }
+        .instagram-card:hover { background: #FFF5FA; }
+        
+        .linkedin-card { border-top-color: #0077B5; }
+        .linkedin-card:hover { background: #F5F9FF; }
+        
+        .github-card { border-top-color: #333; }
+        .github-card:hover { background: #F5F5F5; }
+        
+        .facebook-card { border-top-color: #1877F2; }
+        .facebook-card:hover { background: #F0F4FF; }
+        
+        .follow-cta {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 50px 40px;
+            border-radius: 15px;
+            color: #ffffff;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .follow-cta h2 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+        
+        .follow-cta p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+        }
+        
+        .follow-cta button {
+            background: #ffffff;
+            color: #667eea;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .follow-cta button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div style="font-size:1.3rem;font-weight:bold;letter-spacing:1px;"><strong>Uttam Pokhrel</strong></div>
+        <div style="display:flex; align-items:center; gap:15px; flex-wrap:wrap;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="follow.html">Follow Us</a>
+            <a href="register.html" class="register-box">Apply Now</a>
+        </div>
+    </nav>
+</header>
+<div class="follow-container">
+    <div class="follow-header">
+        <h1>Follow Me</h1>
+        <p>Stay connected and get the latest updates on social media below!</p>
+    </div>
+    
+    <div class="social-grid">
+        <!-- YouTube -->
+        <div class="social-card youtube-card">
+            <span class="social-icon">▶️</span>
+            <h3>YouTube</h3>
+            <p>Watch educational content on AI, coding, and tech tutorials. Subscribe for weekly uploads!</p>
+            <a href="https://youtube.com/@UttamRealPok" target="_blank" class="social-link">Subscribe on YouTube</a>
+        </div>
+        
+        <!-- TikTok -->
+        <div class="social-card twitter-card">
+            <span class="social-icon">😍</span>
+            <h3>TikTok</h3>
+            <p>Follow for tech, AI insights, and daily tiktok on technology and ideas.</p>
+            <a href="https://www.tiktok.com/@uttamrealpok" target="_blank" class="social-link">Follow on TikTok</a>
+        </div>
+        
+        <!-- Instagram -->
+        <div class="social-card instagram-card">
+            <span class="social-icon">📷</span>
+            <h3>Instagram</h3>
+            <p>Behind-the-scenes content, coding snippets, and lifestyle updates from my journey.</p>
+            <a href="https://instagram.com/uttamrealpok" target="_blank" class="social-link">Follow on Instagram</a>
+        </div>
+        
+        <!-- LinkedIn -->
+        <div class="social-card linkedin-card">
+            <span class="social-icon">💼</span>
+            <h3>LinkedIn</h3>
+            <p>Professional updates, project insights, and career development resources.</p>
+            <a href="https://linkedin.com/in/uttampokhrel" target="_blank" class="social-link">Connect on LinkedIn</a>
+        </div>
+        
+        <!-- GitHub -->
+        <div class="social-card github-card">
+            <span class="social-icon">⚙️</span>
+            <h3>GitHub</h3>
+            <p>Explore my open-source projects, code repositories, and technical contributions.</p>
+            <a href="https://github.com/uttamrealpokhrel" target="_blank" class="social-link">Star on GitHub</a>
+        </div>
+        
+        <!-- Facebook -->
+        <div class="social-card facebook-card">
+            <span class="social-icon">👍</span>
+            <h3>Facebook</h3>
+            <p>Connect with community, share feedback, and stay updated with exclusive posts and discussions.</p>
+            <a href="https://facebook.com/uttam.pokhrel.page" target="_blank" class="social-link">Follow on Facebook</a>
+        </div>
+    </div>
+    
+    <div class="follow-cta">
+        <h2>Don't Miss Updates!</h2>
+        <p>Subscribe to my newsletter for monthly summaries of new content and exclusive insights</p>
+        <form onsubmit="handleNewsletter(event)" style="max-width:500px; margin:0 auto;">
+            <input type="email" placeholder="Enter your email and send me updates!" required style="width:100%; padding:12px 15px; border:none; border-radius:8px; margin-bottom:15px; font-size:1rem;">
+            <button type="submit" style="background:#ffffff; width:100%;">Send & Subscribe</button>
+        </form>
+    </div>
+</div>
+<a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+<footer style="margin-top:60px;">
+    <p>© 2029 UTTAM POKHREL. ALL RIGHTS RESERVED!</p>
+</footer>
+
+<script>
+    function handleNewsletter(event) {
+        event.preventDefault();
+        const email = event.target.querySelector('input[type="email"]').value;
+        alert('Thank you for subscribing!\n\nWe will send monthly updates to: ' + email);
+        event.target.reset();
+    }
+</script>
+<script src="theme.js"></script>
+</body>
+</html>
